@@ -1,0 +1,169 @@
+\documentclass[11pt,a4paper]{article}
+
+% ------------------ Packages ------------------
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{caption}
+\usepackage{xcolor}
+
+% ------------------ Styling ------------------
+\onehalfspacing
+\setlength{\parskip}{0.6em}
+
+\titleformat{\section}
+  {\large\bfseries}
+  {}
+  {0em}
+  {}
+
+\titleformat{\subsection}
+  {\normalsize\bfseries}
+  {}
+  {0em}
+  {}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue
+}
+
+% ------------------ Document ------------------
+\begin{document}
+
+% ------------------ Title Page ------------------
+\begin{titlepage}
+    \centering
+    \vspace*{1.5cm}
+
+    {\LARGE \textbf{Global Superstore}}\\[0.3cm]
+    {\Large Exploratory Data Analysis \& Business Insights}\\[1.2cm]
+
+    \textbf{Author:} Sagnik Bhattacharya \\[0.2cm]
+    \textbf{Tools:} Python, SQL (MySQL), Excel \\[0.2cm]
+    \textbf{Date:} \today
+
+    \vfill
+\end{titlepage}
+
+% ------------------ Abstract ------------------
+\section*{Abstract}
+This project presents an exploratory data analysis of the Global Superstore dataset to identify key sales, profit, customer, and operational insights. Using Python, SQL, and Excel, the analysis uncovers profitability drivers, loss-making segments, discount impacts, and regional performance patterns. The findings are translated into actionable business recommendations supported by an interactive dashboard.
+
+% ------------------ Introduction ------------------
+\section{Introduction}
+Retail businesses generate vast volumes of transactional data across products, customers, and regions. Analyzing this data enables organizations to optimize pricing strategies, improve profitability, and enhance customer targeting.  
+This project analyzes the Global Superstore dataset to understand sales trends, profit drivers, and operational efficiency across global markets.
+
+% ------------------ Dataset Description ------------------
+\section{Dataset Description}
+The dataset was sourced from Kaggle:
+
+\begin{itemize}
+    \item \textbf{Source:} \url{https://www.kaggle.com/datasets/fatihilhan/global-superstore-dataset}
+    \item Over 51,000 transactional records
+    \item Covers multiple countries, regions, markets, and customer segments
+\end{itemize}
+
+Key variables include sales, profit, discounts, shipping costs, order priorities, customer segments, and product categories.
+
+% ------------------ Data Cleaning & Feature Engineering ------------------
+\section{Data Cleaning and Feature Engineering}
+The raw dataset was cleaned and transformed to ensure analytical accuracy. Key steps included:
+
+\begin{itemize}
+    \item Standardizing order and shipping date formats
+    \item Creating derived features such as Order Year, Month, Week Number
+    \item Calculating Delivery Days and Profit Margin
+    \item Flagging high-discount orders
+    \item Removing unnecessary or redundant columns
+\end{itemize}
+
+These transformations enabled effective time-series analysis and profitability evaluation.
+
+% ------------------ Exploratory Data Analysis ------------------
+\section{Exploratory Data Analysis}
+
+\subsection{Sales and Profit Trends}
+Sales and profit were analyzed across yearly and monthly timelines to identify growth patterns and volatility.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{../assets/monthly_sales_trend.png}
+    \caption{Monthly Sales Trend}
+\end{figure}
+
+\textit{Insight:} Sales exhibit steady growth over time, while profit shows higher volatility due to discounts and shipping costs.
+
+% ------------------ Category Performance ------------------
+\subsection{Category and Sub-Category Performance}
+Product categories and sub-categories were evaluated to identify high-performing and loss-making areas.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{../assets/category_profit.png}
+    \caption{Profit by Product Category}
+\end{figure}
+
+\textit{Insight:} The Furniture category consistently underperforms in profitability compared to Technology and Office Supplies.
+
+% ------------------ Regional Analysis ------------------
+\subsection{Regional and Market Analysis}
+Sales and profit were compared across regions and markets to assess geographic performance.
+
+\textit{Insight:} Certain regions generate high sales volumes but low profit margins, indicating pricing or cost inefficiencies.
+
+% ------------------ Customer & Segment Analysis ------------------
+\subsection{Customer and Segment Analysis}
+Customer segmentation analysis reveals revenue concentration among a small group of high-value customers.
+
+\textit{Insight:} A minority of customers contribute disproportionately to total revenue, supporting targeted retention strategies.
+
+% ------------------ Discount & Shipping Impact ------------------
+\subsection{Discount and Shipping Impact}
+Discount levels and shipping modes were analyzed to assess margin erosion.
+
+\textit{Insight:} High discounts and Same Day shipping significantly reduce profit margins.
+
+% ------------------ Dashboard Overview ------------------
+\section{Dashboard Overview}
+An interactive Excel dashboard was created to visualize KPIs and trends.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{../assets/dashboard_overview.png}
+    \caption{Global Superstore Excel Dashboard}
+\end{figure}
+
+The dashboard includes KPI cards, trend charts, and slicers for year, region, category, segment, and shipping mode.
+
+% ------------------ Key Insights ------------------
+\section{Key Business Insights}
+\begin{itemize}
+    \item Sales growth does not always translate into profit growth
+    \item High discount levels negatively impact profitability
+    \item Furniture category consistently underperforms
+    \item Same Day shipping reduces margins
+    \item Revenue is concentrated among a small customer segment
+\end{itemize}
+
+% ------------------ Business Recommendations ------------------
+\section{Business Recommendations}
+\begin{enumerate}
+    \item Optimize discount strategies to protect margins
+    \item Re-evaluate consistently loss-making sub-categories
+    \item Focus marketing efforts on high-value customer segments
+    \item Reduce reliance on high-cost shipping modes
+    \item Apply region-specific pricing strategies
+\end{enumerate}
+
+% ------------------ Conclusion ------------------
+\section{Conclusion}
+This analysis demonstrates how transactional data can be transformed into actionable business insights. The project highlights end-to-end data analytics skills including data cleaning, EDA, SQL-based KPIs, and dashboard development.
+
+\end{document}
