@@ -47,11 +47,13 @@ The dataset was sourced from Kaggle:
 ## 🔍 Key Steps
 
 1. **Data Cleaning & Preprocessing**
+
    - Standardized date formats
    - Created derived features: Year, Month, Week Number, Delivery Days, Profit Margin, Discount Flag
    - Engineered helper columns for unique orders and customers
 
 2. **Exploratory Data Analysis (EDA)**
+
    - Sales and profit trends over time
    - Performance by **category, sub-category, and region**
    - Customer segmentation and discount impact analysis
@@ -66,6 +68,7 @@ The dataset was sourced from Kaggle:
 ## 📈 Dashboard Preview
 
 <!-- Replace the placeholder with your dashboard image -->
+
 ![Dashboard Overview](./assets/dashboard_overview.png)
 
 ---
@@ -97,16 +100,33 @@ The dataset was sourced from Kaggle:
 global-superstore-data-analytics/
 │
 ├─ assets/
+│ └─ category_profit.png
 │ └─ dashboard_overview.png
-│
+│ └─ monthly_sales_trend.png
+│ └─ profit_category.png
+│ └─ profit_region.png
+│ └─ profit_shipping_mode.png
+│ └─ sales_customer_segment.png
+|
 ├─ data/
 │ └─ superstore_cleaned.csv
-│
-├─ sql/
-│ └─ KPI_queries.sql
+│ └─ superstore.csv
 │
 ├─ excel_dashboard/
 │ └─ superstore_dashboard.xlsx
+|
+├─ notebooks/
+│ └─ superstore_eda.ipynb
+|
+├─ ppt/
+│ └─ Global_Superstore_Analytics_Presentation.pptx
+│
+├─ reports/
+│ └─ Global_Superstore_Data_Analysis_Report.pdf
+│ └─ Global_Superstore_Data_Analysis_Report.tex
+|
+├─ sql/
+│ └─ KPI_queries.sql
 │
 └─ README.md
 
@@ -116,8 +136,8 @@ global-superstore-data-analytics/
 
 ## 📌 Output
 
-- Cleaned dataset: `data/superstore_cleaned.csv`  
-- Interactive Excel dashboard: `excel_dashboard/superstore_dashboard.xlsx`  
+- Cleaned dataset: `data/superstore_cleaned.csv`
+- Interactive Excel dashboard: `excel_dashboard/superstore_dashboard.xlsx`
 - SQL queries for KPIs: `sql/KPI_queries.sql`
 
 ---
