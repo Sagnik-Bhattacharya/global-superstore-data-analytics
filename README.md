@@ -32,6 +32,8 @@ Perform exploratory data analysis on the Global Superstore dataset to uncover sa
 - Python
 - Pandas
 - Matplotlib / Seaborn
+- Excel
+- SQL
 
 ## Output
 - Cleaned dataset exported as `superstore_cleaned.csv`
